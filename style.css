@@ -32,10 +32,24 @@ img {
 /* Create a 4-column grid layout for the PortfolioExamples */
 #PortfolioExamples {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    grid-template-columns: repeat(5, 1fr); /* 4 equal-width columns */
+    grid-gap: 20px; /* Adjust the gap between items as needed */
+    text-align: center;
+    width:fit-content;
+}
+/* Add overflow-x for scrolling */
+#PortfolioExamplesContainer {
+    width: 100%; /* Set the desired width */
+    overflow-x: auto; /* Enable horizontal scrolling if necessary */
+}
+
+#PortfolioExamples2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 equal-width columns */
     grid-gap: 20px; /* Adjust the gap between items as needed */
     text-align: center;
 }
+
 
 /* Style each item within the grid */
 #PortfolioExamples h2,
@@ -45,7 +59,10 @@ img {
     margin: 0;
 }
 
-
+#branding-guide{
+    padding: 8px;
+    height: 10px;
+}
 nav {
     flex-grow: 1;
     text-align: right;
@@ -128,7 +145,16 @@ body {
 
 }
 
+#brand-intro {
+    align-items: center;
+}
 
+/* Style the PDF image */
+#pdf-image img#branding-guide {
+    max-width: auto; /* Adjust the width as needed */
+    height: 400px; /* Maintain the aspect ratio */
+    cursor: pointer;
+}
 
 /* Style the Sandpiper-Intro div */
 #Sandpiper-Intro {
@@ -162,12 +188,64 @@ body {
     padding: 20px;
 }
 
-/* Style the PDF image */
-#pdf-image img {
-    height: auto;
-    max-width: 100%;
-    cursor: pointer;
+
+#Portfolio{
+    text-align: center;
 }
+
+/* Footer styling */
+footer {
+    background-color: #FFD1DC;
+    padding: 20px 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact,
+.footer-links {
+    margin-right: 40px;
+}
+
+.footer-contact h4,
+.footer-links h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-contact ul,
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact li,
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-contact a,
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+}
+
 
 /* Add a media query to stack the divs vertically on tablet and phone */
 @media screen and (max-width: 768px) {
@@ -177,6 +255,21 @@ body {
     }
     #pdf-image img {
         height: auto;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .footer-contact,
+    .footer-links {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
 
